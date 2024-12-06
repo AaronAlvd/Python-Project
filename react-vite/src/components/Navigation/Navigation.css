@@ -1,3 +1,18 @@
+.Navigation-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
 .profile-dropdown {
   position: absolute;
+  transform: translate(-120px , -10px);
+  width: 100px;
+  list-style: none;
+}
+.ProfileButton-lists{
+  padding: 10px;
+  margin: 0;
+  border: 1px solid black;
+  width: 100%;
 }
