@@ -1,0 +1,11 @@
+.SignupFormModal-div{
+  text-align: center;
+  padding: 20px;
+}
+.SignupFormModal-label{
+  position: absolute;
+  transform: translate(0, -20px);
+}
+.SignupFormModal-div-input{
+  margin: 40px;
+}

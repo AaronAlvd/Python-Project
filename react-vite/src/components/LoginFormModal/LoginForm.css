@@ -1,0 +1,48 @@
+.LoginFormModal-div{
+  text-align: center;
+  padding: 20px;
+}
+.LoginFormModal-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.LoginFormModal-label{
+  position: absolute;
+  font-weight: 800;
+  transform: translate(0px, -30px)
+}
+.LoginFormModal-icon{
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+.LoginFormModal-div-input{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45);
+}
+.LoginFormModal-input{
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px 0 0 5px;
+  font-size: 15px;
+  width: 220px;
+  height: 20px;
+  padding: 5px;
+}
+.LoginFormModal-input:focus{
+  outline: none;
+}
+.LoginFormModal-button{
+  width: 100px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0, .3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
+}
