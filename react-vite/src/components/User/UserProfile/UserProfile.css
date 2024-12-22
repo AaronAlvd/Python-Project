@@ -6,13 +6,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 210px;
-  height: 210px;
-  border: 2px solid black;
+  width: 170px;
+  height: 170px;
   transform: translate(20px, 5px);
   background-color: white;
   border-radius: 50%;
   margin: 0;
+  object-position: center;
 }
 .UserProfile-div-infoBar{
   display: flex;
@@ -22,6 +22,11 @@
   width: 370px;
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+.UserProfile-icon{
+  position: absolute;
+  transform: translate(-205px, 9px);
+  font-size: 20px;
 }
 .UserProfile-p-infoBar{
   font-size: 15px;

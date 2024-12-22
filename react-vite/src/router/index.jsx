@@ -1,7 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
-import LoginFormPage from '../components/LoginFormPage';
-import SignupFormPage from '../components/SignupFormPage';
+import LoginFormPage from '../components/Login/LoginFormPage';
+import SignupFormPage from '../components/Signup/SignupFormPage';
 import UserProfile from '../components/User/UserProfile/UserProfile';
+import ArtifactDetails from '../components/Artifacts/ArtifactDetails/ArtifactDetails';
+import PromptDetails from '../components/Prompts/PromptDetails';
+import ArtifactForm from '../components/Artifacts/Artifactform/ArtifactForm';
 import Layout from './Layout';
 
 export const router = createBrowserRouter([
@@ -23,6 +26,31 @@ export const router = createBrowserRouter([
       {
         path: "profile",
         element: <UserProfile />
+      },
+      {
+        path: "transcription",
+        children: [
+          {
+            path: ":id",
+            element: <ArtifactDetails />
+          },
+          {
+            path: "form",
+            element: <ArtifactForm />
+          }
+        ]
+      },
+      {
+        path: "prompt",
+        children: [
+          {
+            path: ":id",
+            element: <PromptDetails />
+          },
+          {
+            path: "form",
+          }
+        ]
       }
     ],
   },

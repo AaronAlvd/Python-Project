@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { thunkLogin } from "../../redux/session";
+import { thunkLogin } from "../../../redux/session";
 import { FaUser, FaLock } from 'react-icons/fa';
 import { useDispatch } from "react-redux";
-import { useModal } from "../../context/Modal";
+import { useModal } from "../../../context/Modal";
 import "./LoginForm.css";
 
 function LoginFormModal() {
