@@ -1,0 +1,111 @@
+.ArticleForm-div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ArticleForm-form{
+  font-family: 'Lexend';
+}
+.ArticleForm-small{
+  display: flex;
+  width: 17vw;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 0 0 5px;
+  align-items: center;
+}
+.ArticleForm-div-slug{
+  display: flex;
+  align-items: center;
+  margin: 20px 0 0 0;
+  width: 70vw;
+  border: 1px solid black;
+  border-bottom: none;
+  height: 30px;
+}
+.ArticleForm-input-slug{
+  border: none;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  width: 44vw;
+}
+.ArticleForm-input-slug:focus{
+  outline: none;
+}
+.ArticleForm-span-slug{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 10vw;
+  border-left: 1px solid black;
+  height: 30px;
+}
+.ArticleForm-label-slug{
+  font-size: 16px;
+}
+.ArticleForm-div-title{
+  margin: 0px 0 7px 0;
+  width: 70vw;
+  border: 1px solid black;
+}
+.ArticleForm-input-title{
+  margin: 0;
+  border: none;
+  font-size: 19px;
+  width: 60vw;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 10px 0 10px 0;
+}
+.ArticleForm-input-title:focus{
+  outline: none;
+}
+.ArticleForm-input:focus{
+  outline: none;
+}
+.ArticleForm-span-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+  width: 10vw;
+  height: 40px;
+}
+.ArticleForm-label{
+  font-size: 19px;
+  background-color: white;
+  border: none;
+}
+.ArticleForm-div-textarea{
+  width: 70vw;
+  height: min-content;
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+.ArticleForm-textarea{
+  width: 70vw;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Lexend';
+  font-size: 14px;
+  padding: 5px;
+  resize: none;
+  height: 65vh;
+  overflow-y: scroll;
+  border-radius: 0 0 10px 10px;
+}
+.ArticleForm-textarea:focus{
+  outline: none;
+}
+.ArticleForm-div-error{
+  width: 70vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.ArticleForm-error{
+  margin: 10px;
+  padding: 3px 10px 3px 10px;
+  background-color: rgba(255, 0, 0, 0.25);
+}

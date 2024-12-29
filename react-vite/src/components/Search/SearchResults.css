@@ -1,0 +1,32 @@
+.SearchResults-div{
+  padding: 20px
+}
+.SearchResults-div-2{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  padding: 20px
+}
+.SearchResults-div-3{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 20px;
+  padding: 20px
+}
+.SearchResults-div-card{
+  font-family: 'Lexend';
+  height: 150px;
+  width: 250px;
+  border: 1px solid black;
+  overflow-y: hidden;
+  padding: 10px;
+}
+.SearchResults-title{
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+.SearchResults-text{
+  margin: 0;
+  font-size: 10px;
+  white-space: pre-wrap;
+}

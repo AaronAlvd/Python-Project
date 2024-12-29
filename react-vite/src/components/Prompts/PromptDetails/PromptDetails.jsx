@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { getPrompts, updatePrompts, deletePrompts } from '../../redux/prompts';
+import { getPrompts, updatePrompts, deletePrompts } from '../../../redux/prompts';
 import './PromptDetails.css';
 
 export default function PromptDetails() {

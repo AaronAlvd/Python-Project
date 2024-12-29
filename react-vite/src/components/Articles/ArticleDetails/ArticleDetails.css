@@ -1,44 +1,53 @@
-.PromptDetails-div{
+.ArticleDetails-div{
   display: flex;
   justify-content: center;
 }
-.PromptDetails-div-card{
+.ArticleDetails-div-card{
   margin: 20px;
   font-family: 'Lexend';
-  width: 70vw;
+  width: 80vw;
   cursor: default;
 }
-.PromptDetails-div-infoBar{
+.ArticleDetails-div-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 0 10px 0;
+}
+.ArticleDetails-title{
+  margin: 0;
+}
+.ArticleDetails-div-infoBar{
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
 }
-.PromptDetails-ul{
+.ArticleDetails-ul{
   margin: 7px 0 7px 0;
   font-size: 14px;
   padding: 0;
   display: flex;
   list-style-type: none;
 }
-.PromptDetails-li{
+.ArticleDetails-li{
   margin: 0 10px 0 10px;
   cursor: pointer;
   font-weight: 600;
 }
-.PromptDetails-prompt{
+.ArticleDetails-text{
   font-size: 14px;
+  white-space: pre-line;
+  margin: 0 0 20px 0;
 }
-.PromptDetails-textarea{
-  margin: 0;
-  padding: 0;
+.ArticleDetails-textarea{
   border: none;
   width: 70vw;
   resize: none;
   font-family: 'Lexend';
   font-size: 14px;
 }
-.PromptDetails-textarea:focus{
+.ArticleDetails-textarea:focus{
   outline: none;
 }

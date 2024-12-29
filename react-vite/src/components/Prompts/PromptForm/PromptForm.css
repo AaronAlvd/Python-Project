@@ -1,0 +1,67 @@
+.PromptForm-div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.PromptForm-form{
+  font-family: 'Lexend';
+}
+.PromptForm-div-title{
+  margin: 20px 0 7px 0;
+  width: 70vw;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+.PromptForm-title{
+  margin: 0;
+  border: none;
+  font-size: 19px;
+  width: 60vw;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 10px 0 10px 0;
+}
+.PromptForm-span-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+  width: 10vw;
+  height: 40px;
+}
+.PromptForm-button{
+  font-size: 19px;
+  background-color: white;
+  border: none;
+}
+.PromptForm-div-textarea{
+  width: 70vw;
+  height: min-content;
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+.PromptForm-textarea{
+  width: 70vw;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Lexend';
+  font-size: 14px;
+  padding: 5px;
+  resize: none;
+  height: 65vh;
+  overflow-y: scroll;
+  border-radius: 0 0 10px 10px;
+}
+.PromptForm-textarea:focus{
+  outline: none;
+}
+.PromptForm-div-error{
+  width: 70vw;
+  display: flex;
+  justify-content: flex-end;
+}
+.PromptForm-error{
+  margin: 10px;
+  padding: 3px 10px 3px 10px;
+  background-color: rgba(255, 0, 0, 0.25);
+}

@@ -10,11 +10,11 @@ def transcriptions():
   """
   Query to get all the transcriptions of the current user
   """
-  transcriptions = Transcription.query.filter(Transcription.user_id == current_user.id).all()
+  transcriptions = Transcription.query.all()
   return [transcription.to_dict() for transcription in transcriptions]
 
 
-@transcription_routes.route('/', methods=['CREATE'])
+@transcription_routes.route('/', methods=['POST'])
 @login_required
 def createTranscriptions():
   """

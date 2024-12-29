@@ -25,7 +25,7 @@ export const getPrompts = () => async (dispatch) => {
 
 export const createPrompt = (prompt) => async (dispatch) => {
   const response = await fetch('/api/prompt/', {
-    method: 'CREATE',
+    method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       prompt: prompt

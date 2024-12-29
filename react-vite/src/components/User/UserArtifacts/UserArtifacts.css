@@ -1,21 +1,19 @@
 .UserArtifacts-div{
   display: grid;
+  justify-content: space-around;
   width: 100vw;
   padding: 20px;
   box-sizing: border-box;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 300px 300px 300px 300px;
   row-gap: 20px;
-  column-gap: 20px;
 }
 .UserArtifacts-div-card{
   font-family: 'Lexend';
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.15);
-  border-radius: 20px;
+  background-color: rgba(122, 122, 122, 0.1);
   padding: 15px;
-  box-sizing: border-box;
   width: 100%;
-  height: 35vh;
+  height: 413px;
   overflow-y: hidden;
   cursor: pointer;
 }
@@ -23,9 +21,11 @@
   display: flex;
   justify-content: space-between;
 }
-.UserArtifacts-h4{
+.UserArtifacts-title{
   margin: 0;
+  font-size: 15px;
 }
 .UserArtifacts-p{
-  font-size: 14px;
+  font-size: 10px;
+  white-space: pre-line;
 }

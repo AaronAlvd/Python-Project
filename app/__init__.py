@@ -9,6 +9,8 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.transcription_routes import transcription_routes
 from .api.prompt_routes import prompt_routes
+from .api.article_routes import article_routes
+from .api.searchEngine_routes import searchEngine_routes
 from .seeds import seed_commands
 from .config import Config
 
@@ -32,6 +34,8 @@ app.register_blueprint(user_routes, url_prefix='/api/user')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(transcription_routes, url_prefix='/api/transcription')
 app.register_blueprint(prompt_routes, url_prefix='/api/prompt')
+app.register_blueprint(article_routes, url_prefix='/api/article')
+app.register_blueprint(searchEngine_routes, url_prefix='/api/searchEngine')
 db.init_app(app)
 Migrate(app, db)
 

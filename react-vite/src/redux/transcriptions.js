@@ -24,13 +24,17 @@ export const getTranscriptions = () => async (dispatch) => {
 
 export const createTranscription = (text, title) => async (dispatch) => {
   const response = await fetch('/api/transcription/', {
-    method: 'CREATE',
+    method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       text: text,
       title: title,
     })
   })
+
+  if (response.ok) {
+    const data = await response.json()
+  }
 }
 
 export const updateTranscription = (id, text, title) => async (dispatch) => {

@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import User, db
+from app.models import User, db, Transcription, Prompt, Article
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
@@ -13,6 +13,7 @@ def authenticate():
     Authenticates a user.
     """
     if current_user.is_authenticated:
+
         return current_user.to_dict()
     return {'errors': {'message': 'Unauthorized'}}, 401
 

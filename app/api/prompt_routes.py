@@ -11,12 +11,12 @@ def prompts():
   Returns all prompts owned by a specific user
   """
 
-  prompts = Prompt.query.filter(Prompt.user_id == current_user.id).all()
+  prompts = Prompt.query.all()
 
   return [prompt.to_dict() for prompt in prompts]
 
 
-@prompt_routes.route('/', methods=['CREATE'])
+@prompt_routes.route('/', methods=['POST'])
 @login_required
 def createPrompts():
     """

@@ -3,8 +3,16 @@ import LoginFormPage from '../components/Login/LoginFormPage';
 import SignupFormPage from '../components/Signup/SignupFormPage';
 import UserProfile from '../components/User/UserProfile/UserProfile';
 import ArtifactDetails from '../components/Artifacts/ArtifactDetails/ArtifactDetails';
-import PromptDetails from '../components/Prompts/PromptDetails';
+import PromptDetails from '../components/Prompts/PromptDetails/PromptDetails';
 import ArtifactForm from '../components/Artifacts/Artifactform/ArtifactForm';
+import ArticleForm from '../components/Articles/ArticleForm/ArticleForm';
+import PromptForm from '../components/Prompts/PromptForm/PromptForm';
+import ArticleDetails from '../components/Articles/ArticleDetails/ArticleDetails';
+import ArtifactPage from '../components/Artifacts/ArtifactPage/ArtifactPage';
+import ArticlePage from '../components/Articles/ArticlePage/ArticlePage';
+import PromptPage from '../components/Prompts/PromptPage/PromptPage';
+import Homepage from '../components/Home/Homepage';
+import SearchResults from '../components/Search/SearchResults';
 import Layout from './Layout';
 
 export const router = createBrowserRouter([
@@ -13,7 +21,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h1>Welcome!</h1>,
+        element: <Homepage />,
       },
       {
         path: "login",
@@ -28,8 +36,16 @@ export const router = createBrowserRouter([
         element: <UserProfile />
       },
       {
-        path: "transcription",
+        path: "searchEngine/:query",
+        element: <SearchResults />
+      },
+      {
+        path: "documents",
         children: [
+          {
+            path: "all",
+            element: <ArtifactPage />,
+          },
           {
             path: ":id",
             element: <ArtifactDetails />
@@ -37,18 +53,40 @@ export const router = createBrowserRouter([
           {
             path: "form",
             element: <ArtifactForm />
-          }
+          },
         ]
       },
       {
-        path: "prompt",
+        path: "prompts",
         children: [
+          {
+            path: "all",
+            element: <PromptPage/>
+          },
           {
             path: ":id",
             element: <PromptDetails />
           },
           {
             path: "form",
+            element: <PromptForm />
+          }
+        ]
+      },
+      {
+        path: "articles",
+        children: [
+          {
+            path: "all",
+            element: <ArticlePage />,
+          },
+          {
+            path: ":id",
+            element: <ArticleDetails />
+          },
+          {
+            path: "form",
+            element: <ArticleForm />
           }
         ]
       }

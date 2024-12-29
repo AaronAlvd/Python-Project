@@ -1,0 +1,59 @@
+.ArtifactForm-div{
+  display: flex;
+  justify-content: center;
+}
+.ArtifactForm-form{
+  font-family: 'Lexend';
+}
+.ArtifactForm-div-input{
+  margin: 20px 0 7px 0;
+  width: 70vw;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+.ArtifactForm-input{
+  border: none;
+  font-size: 19px;
+  font-weight: 700;
+  width: 60vw;
+  height: 30px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 10px 0 10px 0;
+}
+.ArtifactForm-input:focus{
+  outline: none;
+}
+.ArtifactForm-span-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+  width: 10vw;
+  height: 40px;
+}
+.ArtifactForm-button{
+  font-size: 19px;
+  background-color: white;
+  border: none;
+}
+.ArtifactForm-div-textarea{
+  width: 70vw;
+  height: min-content;
+  border: 1px solid black;
+  border-radius: 0 0 10px 10px;
+}
+.ArtifactForm-textarea{
+  width: 70vw;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Lexend';
+  font-size: 14px;
+  padding: 5px;
+  resize: none;
+  height: 65vh;
+  overflow-y: scroll;
+  border-radius: 0 0 10px 10px;
+}
+.ArtifactForm-textarea:focus{
+  outline: none;
+}

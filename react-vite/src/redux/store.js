@@ -8,13 +8,15 @@ import thunk from "redux-thunk";
 import sessionReducer from "./session";
 import transcriptionReducer from "./transcriptions";
 import promptReducer from "./prompts";
-import connectionReducer from "./connection";
+import articleReducer from "./articles";
+import searchReducer from './search';
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   transcription: transcriptionReducer,
   prompt: promptReducer,
-  connection: connectionReducer,
+  article: articleReducer,
+  search: searchReducer,
 });
 
 let enhancer;

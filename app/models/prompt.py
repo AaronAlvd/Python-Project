@@ -8,6 +8,7 @@ class Prompt(db.Model):
 
   id = db.Column(db.Integer, nullable=False, primary_key=True, unique=True)
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+  title = db.Column(db.String, nullable=False, default='Untitled Prompt')
   prompt = db.Column(db.Text, nullable=False)
 
   def to_dict(self):
