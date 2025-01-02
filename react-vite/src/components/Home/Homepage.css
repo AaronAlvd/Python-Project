@@ -49,8 +49,20 @@
   width: 270px;
   height: 370px;
   border-radius: 20px;
-  box-shadow: inset 0 0 10px rgb(200, 200, 200);
   font-family: 'Lexend';
+  transition: .5s;
+}
+.Homepage-col-logo{
+  transition: .5s;
+  font-size: 60px;
+  cursor: pointer;
+}
+.Homepage-col-logo:hover{
+  padding: 15px;
+  transition: .5s;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 .Homepage-h1{
   margin: 15px 0 25px 0;

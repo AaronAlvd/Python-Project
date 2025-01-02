@@ -7,6 +7,7 @@ import { faPlus, faPlusCircle, faPlusSquare } from '@fortawesome/free-solid-svg-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Default from '../../Default/default';
 
 export default function UserProfile() {
   const user = useSelector((state) => state.session.user)
@@ -19,11 +20,7 @@ export default function UserProfile() {
     else if (activeSection === 'Articles') return navigate('/articles/form')
   }
 
-  if (!user) {
-    return (
-      <h2>Must Sign In</h2>
-    )
-  }
+  if (user === null) return <Default/>
 
   return (
     <div>

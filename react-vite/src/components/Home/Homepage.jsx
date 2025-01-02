@@ -5,11 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getSearchResults } from '../../redux/search';
 import { useEffect, useState } from 'react';
+import Default from '../Default/default';
 
 export default function Homepage() {
+  const user = useSelector((state) => state.session.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [query, setQuery] = useState();
+
+  if (user === null) return <Default />
 
   return (
     <div className='Homepage-div'>
@@ -28,7 +32,7 @@ export default function Homepage() {
 
       <div className='Homepage-div-body'>
           <div className="Homepage-div-col1">
-            <FontAwesomeIcon icon={faGlobe} style={{fontSize: 60, cursor: 'pointer'}} onClick={() => navigate('/articles/all')}/>
+            <FontAwesomeIcon icon={faGlobe} className='Homepage-col-logo' onClick={() => navigate('/articles/all')}/>
             <div className='Homepage-div-box' onClick={() => navigate('/articles/all')}>
               <h1 className='Homepage-h1'>Articles</h1>
               <p className='Homepage-p'>
@@ -40,7 +44,7 @@ export default function Homepage() {
             </div>
           </div>
           <div className="Homepage-div-col2">
-            <FontAwesomeIcon icon={faFileAlt} style={{fontSize: 60, cursor: 'pointer'}} onClick={() => navigate('/documents/all')}/>
+            <FontAwesomeIcon icon={faFileAlt} className='Homepage-col-logo' onClick={() => navigate('/documents/all')}/>
             <div className='Homepage-div-box' onClick={() => navigate('/documents/all')}>
               <h1 className='Homepage-h1'>Documents</h1>
               <p className='Homepage-p'>
@@ -51,7 +55,7 @@ export default function Homepage() {
             </div>
           </div>
           <div className="Homepage-div-col3">
-            <FontAwesomeIcon icon={faPen} style={{fontSize: 60, cursor: 'pointer'}} onClick={() => navigate('/prompts/all')}/>
+            <FontAwesomeIcon icon={faPen} className='Homepage-col-logo' onClick={() => navigate('/prompts/all')}/>
             <div className='Homepage-div-box' onClick={() => navigate('/prompts/all')}>
               <h1 className='Homepage-h1'>Prompts</h1>
               <p className='Homepage-p'>

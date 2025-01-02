@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { getTranscriptions, updateTranscription, deleteTranscription } from "../../../redux/transcriptions"; 
 import './ArtifactDetails.css'
 
 export default function ArtifactDetails() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
   const userId = useSelector((state) => state.session.user.id);
   const transcriptions = useSelector((state) => state.transcription.transcriptions);
@@ -30,7 +31,8 @@ export default function ArtifactDetails() {
   }, [dispatch, id, transcriptions]);
 
   function handleSubmit() {
-    dispatch(updateTranscription(id, text, title))
+    dispatch(updateTranscription(id, text, title));
+    navigate('/profile');
   }
 
   function handleDelete() {
