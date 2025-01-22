@@ -1,0 +1,22 @@
+
+.PromptResults-grid{
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+.PromptResults-card{
+  font-family: 'Lexend';
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(122, 122, 122, 0.1);
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 413px;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.PromptResults-text{
+  font-size: 10px;
+  white-space: pre-wrap;
+}

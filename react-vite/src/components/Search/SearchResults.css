@@ -1,32 +1,31 @@
 .SearchResults-div{
-  padding: 20px
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.SearchResults-div-2{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  row-gap: 20px;
-  padding: 20px
+.SearchResults-titleSection{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
 }
-.SearchResults-div-3{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  row-gap: 20px;
-  padding: 20px
+.SearchResults-titleBox{
+  margin: 0 10px;
+  transition: .2s;
 }
-.SearchResults-div-card{
-  font-family: 'Lexend';
-  height: 150px;
-  width: 250px;
-  border: 1px solid black;
-  overflow-y: hidden;
+.SearchResults-titleBox:hover{
+  transform: scale(1.1);
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  transition: .2s;
 }
 .SearchResults-title{
-  text-align: center;
-  margin: 0 0 10px 0;
-}
-.SearchResults-text{
   margin: 0;
-  font-size: 10px;
-  white-space: pre-wrap;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+}
+.SearchResults-titleActive{
+  border-bottom: 1px solid black;
 }
