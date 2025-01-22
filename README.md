@@ -1,131 +1,125 @@
-# Flask React Project
 
-This is the starter for the Flask React project.
+# WikiDocs - Documentation
 
-## Getting started
+## Overview
 
-1. Clone this repository (only this branch).
+**WikiDocs** is a collaborative web application designed to provide a platform for users to create, edit, and organize knowledge-based content. It functions similarly to Wikipedia, allowing users to contribute and manage articles, documents, and prompts. With a robust CRUD (Create, Read, Update, Delete) functionality, WikiDocs supports a variety of interactions, providing a comprehensive system for knowledge management.
 
-2. Install dependencies.
+---
 
+## Features
+
+### 1. **User Management**
+   - **Create**: Users can create an account and profile on the platform.
+   - **Read**: Users can view profiles, articles, and other shared knowledge.
+   - **Update**: Users can edit their profiles and manage personal information.
+   - **Delete**: Users can deactivate their accounts or remove personal data from the platform.
+
+### 2. **Document Management**
+   - **Create**: Users can create new documents, which can be public or private.
+   - **Read**: Users can view documents and associated articles.
+   - **Update**: Users can edit their own documents to keep information accurate and up-to-date.
+   - **Delete**: Users can delete their own documents.
+
+### 3. **Article Management**
+   - **Create**: Users can write and publish new articles that contribute to the overall knowledge base.
+   - **Read**: Articles can be browsed and read by any user.
+   - **Update**: Users can edit their own articles to refine content or correct errors.
+   - **Delete**: Users can remove their own articles.
+
+### 4. **Prompt Management**
+   - **Create**: Users can create prompts for generating ideas, articles, or documents.
+   - **Read**: Users can view prompts that may help guide the creation of new content.
+   - **Update**: Users can update their own prompts.
+   - **Delete**: Users can delete their own prompts.
+
+---
+
+## User Roles and Permissions
+
+### **Roles Overview**
+
+WikiDocs has two user roles: **Owner** and **Reader**. Both roles have similar permissions but with different levels of access for managing content. 
+
+1. **Owner**
+   - **Permissions**: The Owner has full control over the platform, including content management and user administration.
+   - **Can**:
+     - Create, edit, and delete their own articles, documents, and prompts.
+     - View and read all articles, documents, and prompts created by other users.
+     - Moderate and delete any content (if required).
+     - Manage user accounts (create, edit, delete users).
+
+2. **Reader**
+   - **Permissions**: The Reader has basic read-only access to all public content.
+   - **Can**:
+     - Create, edit, and delete their own articles, documents, and prompts.
+     - View all public articles, documents, and prompts created by others.
+     - Cannot manage other users or modify content created by others.
+
+### Role-Based Permissions Table:
+
+| Feature/Action               | **Owner** | **Reader** |
+|------------------------------|-----------|------------|
+| **Create Articles**           | ✅        | ✅         |
+| **Edit Articles**             | ✅        | ✅ (Own)   |
+| **Delete Articles**           | ✅        | ✅ (Own)   |
+| **Create Documents**          | ✅        | ✅         |
+| **Edit Documents**            | ✅        | ✅ (Own)   |
+| **Delete Documents**          | ✅        | ✅ (Own)   |
+| **Create Prompts**            | ✅        | ✅         |
+| **Edit Prompts**              | ✅        | ✅ (Own)   |
+| **Delete Prompts**            | ✅        | ✅ (Own)   |
+| **View All Public Content**   | ✅        | ✅         |
+| **View Private Content**      | ✅        | ❌         |
+| **Manage Users**              | ✅        | ❌         |
+
+---
+
+## API Endpoints
+
+WikiDocs offers a RESTful API for interacting with the platform programmatically. Below are some of the key endpoints.
+
+### User Endpoints
+- `POST /users/register`: Create a new user account.
+- `POST /users/login`: Login to the platform.
+- `GET /users/{id}`: View a user's profile.
+- `PUT /users/{id}`: Update a user's profile information.
+- `DELETE /users/{id}`: Deactivate a user account.
+
+### Document Endpoints
+- `POST /documents`: Create a new document.
+- `GET /documents/{id}`: View a specific document.
+- `PUT /documents/{id}`: Update an existing document.
+- `DELETE /documents/{id}`: Delete a document.
+
+### Article Endpoints
+- `POST /articles`: Create a new article.
+- `GET /articles/{id}`: View a specific article.
+- `PUT /articles/{id}`: Update an existing article.
+- `DELETE /articles/{id}`: Delete an article.
+
+### Prompt Endpoints
+- `POST /prompts`: Create a new prompt.
+- `GET /prompts/{id}`: View a specific prompt.
+- `PUT /prompts/{id}`: Update an existing prompt.
+- `DELETE /prompts/{id}`: Delete a prompt.
+
+---
+
+## Technology Stack
+
+WikiDocs is built using modern web technologies to ensure scalability, reliability, and ease of use.
+
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Flask (Python)
+- **Database**: PostgreSQL
+- **Authentication**: JWT (JSON Web Tokens)
+- **Hosting**: AWS, DigitalOcean
+
+---
+
+## Getting Started
+
+1. Clone the repository:
    ```bash
-   pipenv install -r requirements.txt
-   ```
-
-3. Create a __.env__ file based on the example with proper settings for your
-   development environment.
-
-4. Make sure the SQLite3 database connection URL is in the __.env__ file.
-
-5. This starter organizes all tables inside the `flask_schema` schema, defined
-   by the `SCHEMA` environment variable.  Replace the value for
-   `SCHEMA` with a unique name, **making sure you use the snake_case
-   convention.**
-
-6. Get into your pipenv, migrate your database, seed your database, and run your
-   Flask app:
-
-   ```bash
-   pipenv shell
-   ```
-
-   ```bash
-   flask db upgrade
-   ```
-
-   ```bash
-   flask seed all
-   ```
-
-   ```bash
-   flask run
-   ```
-
-7. The React frontend has no styling applied. Copy the __.css__ files from your
-   Authenticate Me project into the corresponding locations in the
-   __react-vite__ folder to give your project a unique look.
-
-8. To run the React frontend in development, `cd` into the __react-vite__
-   directory and run `npm i` to install dependencies. Next, run `npm run build`
-   to create the `dist` folder. The starter has modified the `npm run build`
-   command to include the `--watch` flag. This flag will rebuild the __dist__
-   folder whenever you change your code, keeping the production version up to
-   date.
-
-## Deployment through Render.com
-
-First, recall that Vite is a development dependency, so it will not be used in
-production. This means that you must already have the __dist__ folder located in
-the root of your __react-vite__ folder when you push to GitHub. This __dist__
-folder contains your React code and all necessary dependencies minified and
-bundled into a smaller footprint, ready to be served from your Python API.
-
-Begin deployment by running `npm run build` in your __react-vite__ folder and
-pushing any changes to GitHub.
-
-Refer to your Render.com deployment articles for more detailed instructions
-about getting started with [Render.com], creating a production database, and
-deployment debugging tips.
-
-From the Render [Dashboard], click on the "New +" button in the navigation bar,
-and click on "Web Service" to create the application that will be deployed.
-
-Select that you want to "Build and deploy from a Git repository" and click
-"Next". On the next page, find the name of the application repo you want to
-deploy and click the "Connect" button to the right of the name.
-
-Now you need to fill out the form to configure your app. Most of the setup will
-be handled by the __Dockerfile__, but you do need to fill in a few fields.
-
-Start by giving your application a name.
-
-Make sure the Region is set to the location closest to you, the Branch is set to
-"main", and Runtime is set to "Docker". You can leave the Root Directory field
-blank. (By default, Render will run commands from the root directory.)
-
-Select "Free" as your Instance Type.
-
-### Add environment variables
-
-In the development environment, you have been securing your environment
-variables in a __.env__ file, which has been removed from source control (i.e.,
-the file is gitignored). In this step, you will need to input the keys and
-values for the environment variables you need for production into the Render
-GUI.
-
-Add the following keys and values in the Render GUI form:
-
-- SECRET_KEY (click "Generate" to generate a secure secret for production)
-- FLASK_ENV production
-- FLASK_APP app
-- SCHEMA (your unique schema name, in snake_case)
-
-In a new tab, navigate to your dashboard and click on your Postgres database
-instance.
-
-Add the following keys and values:
-
-- DATABASE_URL (copy value from the **External Database URL** field)
-
-**Note:** Add any other keys and values that may be present in your local
-__.env__ file. As you work to further develop your project, you may need to add
-more environment variables to your local __.env__ file. Make sure you add these
-environment variables to the Render GUI as well for the next deployment.
-
-### Deploy
-
-Now you are finally ready to deploy! Click "Create Web Service" to deploy your
-project. The deployment process will likely take about 10-15 minutes if
-everything works as expected. You can monitor the logs to see your Dockerfile
-commands being executed and any errors that occur.
-
-When deployment is complete, open your deployed site and check to see that you
-have successfully deployed your Flask application to Render! You can find the
-URL for your site just below the name of the Web Service at the top of the page.
-
-**Note:** By default, Render will set Auto-Deploy for your project to true. This
-setting will cause Render to re-deploy your application every time you push to
-main, always keeping it up to date.
-
-[Render.com]: https://render.com/
-[Dashboard]: https://dashboard.render.com/
+   git clone https://github.com/yourusername/WikiDocs.git
