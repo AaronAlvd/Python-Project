@@ -1,11 +1,9 @@
 
-# WikiDocs - Documentation
-
-## Overview
-
-![Web App Screenshot](./react-vite/public/webApp.png)
+# WikiDocs
 
 **WikiDocs** is a collaborative web application designed to provide a platform for users to create, edit, and organize knowledge-based content. It functions similarly to Wikipedia, allowing users to contribute and manage articles, documents, and prompts. With a robust CRUD (Create, Read, Update, Delete) functionality, WikiDocs supports a variety of interactions, providing a comprehensive system for knowledge management.
+
+![Web App Screenshot](./react-vite/public/webApp.png)
 
 ---
 
